@@ -1,0 +1,40 @@
+extends layout
+
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-6
+        h1= title
+  .row
+    .col-xs-12.col-sm-12.col-md-6
+      .error= message
+      .row.list-group
+        each food in foods
+          .col-md-12.list-group-item
+            .row
+              .col-xs-10
+                h4 
+                  h2
+                    a.food_link(href="create_edit/#{food._id}")= food.name
+                    small &nbsp;
+              .col-xs-2
+                a.btn.btn-sm.btn-primary(href="/food/delete/#{food._id}") Delete
+                
+            .row
+              .col-sm-3
+                h3 Date
+                p.date= food.date
+              if food.expiry
+                .col-sm-3
+                  h3 Expiry Date
+                  p= food.expiry
+              .col-sm-3
+                h3 Quantity
+                p= food.quantity
+              .col-sm-3
+                h3 Left Overs
+                p= food.left_overs
+            
+    .col-xs-12.col-sm-4 
+      p.lead= sidebar

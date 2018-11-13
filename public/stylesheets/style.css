@@ -1,8 +1,17 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: darkseagreen;
 }
 
 a {
-  color: #00B7FF;
+  color: #37C4F9;
+}
+
+.food_link{
+  color: #C4EFF9;
+}
+
+.background{
+    color:darkseagreen;
 }
